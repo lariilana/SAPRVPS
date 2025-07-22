@@ -134,13 +134,32 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.delete("/api/videos/:id", async (req, res) => {
     try {
       const id = parseInt(req.params.id);
-      const success = await storage.deleteVideo(id);
       
-      if (!success) {
+      // Get video info before deletion to find the file
+      const video = await storage.getVideo(id);
+      if (!video) {
         return res.status(404).json({ message: "Video not found" });
       }
 
-      res.json({ message: "Video deleted successfully" });
+      // Delete from database first
+      const success = await storage.deleteVideo(id);
+      if (!success) {
+        return res.status(404).json({ message: "Failed to delete video from database" });
+      }
+
+      // Delete file from uploads folder
+      const filePath = path.join(process.cwd(), 'uploads', video.filename);
+      try {
+        if (fs.existsSync(filePath)) {
+          fs.unlinkSync(filePath);
+          console.log(`Deleted file: ${filePath}`);
+        }
+      } catch (fileError) {
+        console.error(`Failed to delete file ${filePath}:`, fileError);
+        // Don't fail the whole operation if file deletion fails
+      }
+
+      res.json({ message: "Video and file deleted successfully" });
     } catch (error) {
       res.status(500).json({ message: "Failed to delete video" });
     }
@@ -251,6 +270,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
         bitrate: `${streamConfig.bitrate}k` || '3000k',
         fps: streamConfig.framerate || 30
       };
+
+      // For demo purposes, use local RTMP if no real stream key provided
+      if (streamConfig.streamKey === 'test-key-123' || !streamConfig.streamKey) {
+        rtmpConfig.outputUrl = 'rtmp://localhost:1935/live';
+        rtmpConfig.streamKey = 'demo';
+      }
 
       const streamStarted = await rtmpManager.startStream(currentVideoId, rtmpConfig);
       
