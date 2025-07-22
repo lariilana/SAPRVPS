@@ -307,7 +307,17 @@ app.get('/api/stream-status', async (req, res) => {
       );
       res.json(defaultStatus.rows[0]);
     } else {
-      res.json(result.rows[0]);
+      // Convert snake_case to camelCase for frontend compatibility
+      const status = result.rows[0];
+      res.json({
+        id: status.id,
+        status: status.status,
+        viewerCount: status.viewer_count,
+        uptime: status.uptime,
+        currentVideoId: status.current_video_id,
+        startedAt: status.started_at,
+        loopPlaylist: status.loop_playlist
+      });
     }
   } catch (error) {
     console.error('Error fetching stream status:', error);
@@ -586,6 +596,56 @@ app.get('/api/stream/loop/status', async (req, res) => {
   } catch (error) {
     console.error('Error getting loop status:', error);
     res.status(500).json({ error: 'Failed to get loop status' });
+  }
+});
+
+app.post('/api/stream/loop/enable', async (req, res) => {
+  try {
+    // Update database
+    await db.query('UPDATE stream_status SET loop_playlist = true WHERE id = (SELECT MAX(id) FROM stream_status)');
+    
+    // Update RTMP manager
+    rtmpManager.setLoopEnabled(true);
+    
+    const result = await db.query('SELECT * FROM stream_status ORDER BY id DESC LIMIT 1');
+    const status = result.rows[0];
+    res.json({
+      id: status.id,
+      status: status.status,
+      viewerCount: status.viewer_count,
+      uptime: status.uptime,
+      currentVideoId: status.current_video_id,
+      startedAt: status.started_at,
+      loopPlaylist: status.loop_playlist
+    });
+  } catch (error) {
+    console.error('Error enabling loop:', error);
+    res.status(500).json({ error: 'Failed to enable loop' });
+  }
+});
+
+app.post('/api/stream/loop/disable', async (req, res) => {
+  try {
+    // Update database
+    await db.query('UPDATE stream_status SET loop_playlist = false WHERE id = (SELECT MAX(id) FROM stream_status)');
+    
+    // Update RTMP manager
+    rtmpManager.setLoopEnabled(false);
+    
+    const result = await db.query('SELECT * FROM stream_status ORDER BY id DESC LIMIT 1');
+    const status = result.rows[0];
+    res.json({
+      id: status.id,
+      status: status.status,
+      viewerCount: status.viewer_count,
+      uptime: status.uptime,
+      currentVideoId: status.current_video_id,
+      startedAt: status.started_at,
+      loopPlaylist: status.loop_playlist
+    });
+  } catch (error) {
+    console.error('Error disabling loop:', error);
+    res.status(500).json({ error: 'Failed to disable loop' });
   }
 });
 
