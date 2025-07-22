@@ -1,0 +1,1000 @@
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+
+FFmpeg stderr:   libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.3.100
+  Duration: 00:11:05.47, start: 0.000000, bitrate: 2480 kb/s
+
+FFmpeg stderr:   Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2469 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und)
+FFmpeg stderr: : Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x7a3697215a80] Requested output format '-vf' is not known.
+[out#0 @ 0x7a36972336c0] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-04-10 06-41-40.mp4
+Starting RTMP stream for video 2 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:06:25.20, start: 0.000000, bitrate: 2510 kb/s
+  Stream #0:0[0x1]
+FFmpeg stderr: (und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2493 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 7 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x7af7c55d4380] Requested output format '-vf' is not known.
+[out#0 @ 0x7af7c5701680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-10-18 20-55-39.mp4
+Starting RTMP stream for video 1 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+
+FFmpeg stderr:   libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.3.100
+  Duration: 00:11:05.47, start: 0.000000, bitrate: 2480 kb/s
+
+FFmpeg stderr:   Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2469 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+FFmpeg stderr: 
+[AVFormatContext @ 0x7bc906bf07c0] Requested output format '-vf' is not known.
+[out#0 @ 0x7bc906cbc980] Error initializing the muxer for scale=1280:720: Invalid argument
+
+FFmpeg stderr: Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-04-10 06-41-40.mp4
+Starting RTMP stream for video 2 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:06:25.20, start: 0.000000, bitrate: 2510 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2493 kb/s, 
+FFmpeg stderr: 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 7 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+[AVFormatContext @ 0x71a76ce47a80] Requested output format '-vf' is not known.
+
+FFmpeg stderr: [out#0 @ 0x71a76ce656c0] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-10-18 20-55-39.mp4
+Starting RTMP stream for video 1 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+
+FFmpeg stderr:   libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.3.100
+  Duration: 00:11:05.47, start: 0.000000, bitrate: 2480 kb/s
+  Stream #0:0
+FFmpeg stderr: [0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2469 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x73158bf21380] Requested output format '-vf' is not known.
+[out#0 @ 0x73158c04e680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-04-10 06-41-40.mp4
+Starting RTMP stream for video 2 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+
+FFmpeg stderr:   libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:06:25.20, start: 0.000000, bitrate: 2510 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2493 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und)
+FFmpeg stderr: : Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 7 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+[AVFormatContext @ 0x779f0abc8380] Requested output format '-vf' is not known.
+[out#0 @ 0x779f0acf5680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-10-18 20-55-39.mp4
+Starting RTMP stream for video 1 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.3.100
+  Duration: 00:11:05.47, start: 0.000000, bitrate: 2480 kb/s
+
+FFmpeg stderr:   Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2469 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : 
+FFmpeg stderr: [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x7e46d2d73380] Requested output format '-vf' is not known.
+[out#0 @ 0x7e46d2ea0680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-04-10 06-41-40.mp4
+Starting RTMP stream for video 2 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:06:25.20, start: 0.000000, bitrate: 2510 kb/s
+
+FFmpeg stderr:   Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2493 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 7 kb/s (default)
+    Metadata:
+      handler_name    : 
+FFmpeg stderr: SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x70bd2e10b380] Requested output format '-vf' is not known.
+[out#0 @ 0x70bd2e238680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-10-18 20-55-39.mp4
+Starting RTMP stream for video 1 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.3.100
+  Duration: 00:11:05.47, start: 0.000000, bitrate: 2480 kb/s
+
+FFmpeg stderr:   Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2469 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 2 kb/s (default)
+FFmpeg stderr: 
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x7d2460364380] Requested output format '-vf' is not known.
+[out#0 @ 0x7d2460491680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-04-10 06-41-40.mp4
+Starting RTMP stream for video 2 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:06:25.20, start: 0.000000, bitrate: 2510 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2493 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 7 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+FFmpeg stderr: 
+      vendor_id       : [0][0][0][0]
+[AVFormatContext @ 0x7bffb6837380] Requested output format '-vf' is not known.
+[out#0 @ 0x7bffb6964680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-10-18 20-55-39.mp4
+Starting RTMP stream for video 1 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+
+FFmpeg stderr:   libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.3.100
+  Duration: 00:11:05.47, start: 0.000000, bitrate: 2480 kb/s
+
+FFmpeg stderr:   Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2469 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+
+FFmpeg stderr:       handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x766dde0e4a80] Requested output format '-vf' is not known.
+[out#0 @ 0x766dde1026c0] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-04-10 06-41-40.mp4
+Starting RTMP stream for video 2 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:06:25.20, start: 0.000000, bitrate: 2510 kb/s
+
+FFmpeg stderr:   Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2493 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 7 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+
+FFmpeg stderr:       vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x787fec2bd380] Requested output format '-vf' is not known.
+[out#0 @ 0x787fec3ea680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-10-18 20-55-39.mp4
+Starting RTMP stream for video 1 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.3.100
+  Duration: 00:11:05.47, start: 0.000000, bitrate: 2480 kb/s
+
+FFmpeg stderr:   Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2469 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+
+FFmpeg stderr:       vendor_id       : [0][0][0][0]
+[AVFormatContext @ 0x756936112a80] Requested output format '-vf' is not known.
+
+FFmpeg stderr: [out#0 @ 0x7569361306c0] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-04-10 06-41-40.mp4
+Starting RTMP stream for video 2 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:06:25.20, start: 0.000000, bitrate: 2510 kb/s
+  Stream #0:0
+FFmpeg stderr: [0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2493 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 7 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x708cedf95a80] Requested output format '-vf' is not known.
+[out#0 @ 0x708cedfb36c0] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-10-18 20-55-39.mp4
+Starting RTMP stream for video 1 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+
+FFmpeg stderr:   libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.3.100
+  Duration: 00:11:05.47, start: 0.000000, bitrate: 2480 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2469 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+FFmpeg stderr: 
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x78f3acf1e380] Requested output format '-vf' is not known.
+[out#0 @ 0x78f3ad04b680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-04-10 06-41-40.mp4
+Starting RTMP stream for video 2 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:06:25.20, start: 0.000000, bitrate: 2510 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2493 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 7 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x7ba55fbc1380] Requested output format '-vf' is not known.
+[out#0 @ 0x7ba55fcee680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-10-18 20-55-39.mp4
+Starting RTMP stream for video 1 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.3.100
+  Duration: 00:11:05.47, start: 0.000000, bitrate: 2480 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2469 kb/s
+FFmpeg stderr: , 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x70db04c2f380] Requested output format '-vf' is not known.
+[out#0 @ 0x70db04d5c680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-04-10 06-41-40.mp4
+Starting RTMP stream for video 2 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+
+FFmpeg stderr:   libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:06:25.20, start: 0.000000, bitrate: 2510 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2493 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 7 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x71aa28c3da80] Requested output format '-vf' is not known.
+[out#0 @ 0x71aa28c5b6c0] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-10-18 20-55-39.mp4
+Starting RTMP stream for video 1 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.3.100
+  Duration: 
+FFmpeg stderr: 00:11:05.47, start: 0.000000, bitrate: 2480 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2469 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr:   Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x7fa37feeb380] Requested output format '-vf' is not known.
+[out#0 @ 0x7fa380018680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-04-10 06-41-40.mp4
+Starting RTMP stream for video 2 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+
+FFmpeg stderr:   libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 
+FFmpeg stderr: 00:06:25.20, start: 0.000000, bitrate: 2510 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2493 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 7 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+FFmpeg stderr: 
+      vendor_id       : [0][0][0][0]
+[AVFormatContext @ 0x76edac2a0a80] Requested output format '-vf' is not known.
+[out#0 @ 0x76edac2be6c0] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-10-18 20-55-39.mp4
+Starting RTMP stream for video 1 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.3.100
+  Duration: 00:11:05.47, start: 0.000000, bitrate: 2480 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2469 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+[AVFormatContext @ 0x75370a050380] Requested output format '-vf' is not known.
+[out#0 @ 0x75370a17d680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-04-10 06-41-40.mp4
+Starting RTMP stream for video 2 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:06:25.20, start: 0.000000, bitrate: 2510 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2493 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 7 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x709a73b9b540] Requested output format '-vf' is not known.
+[out#0 @ 0x709a73c516c0] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-10-18 20-55-39.mp4
+Starting RTMP stream for video 1 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+
+FFmpeg stderr:   libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.3.100
+  Duration: 00:11:05.47, start: 0.000000, bitrate: 2480 kb/s
+
+FFmpeg stderr:   Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2469 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1
+FFmpeg stderr: [0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x7dc648eb2380] Requested output format '-vf' is not known.
+[out#0 @ 0x7dc648fdf680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-04-10 06-41-40.mp4
+Starting RTMP stream for video 2 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+
+FFmpeg stderr:   libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753008003268-u-wraOkQWkNuqCsTOqXbo-2024-04-10 06-41-40.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.16.100
+  Duration: 00:06:25.20, start: 0.000000, bitrate: 2510 kb/s
+
+FFmpeg stderr:   Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 2493 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und)
+FFmpeg stderr: : Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 7 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x76c0c7a5e380] Requested output format '-vf' is not known.
+[out#0 @ 0x76c0c7b8b680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+
+FFmpeg stderr: Error opening output files: Invalid argument
+
+FFmpeg process exited with code 234
+Playing next video: 2024-10-18 20-55-39.mp4
+Starting RTMP stream for video 1 with config: {"platform":"youtube","streamKey":"ggf0-p1a1-17h7-5taw-767b","rtmpUrl":"","resolution":"1280x720","framerate":30,"bitrate":2500}
+FFmpeg command: ffmpeg -re -i /app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 2500k -maxrate 2500k -bufsize 5000k -r 30 -g 60 -c:a aac -b:a 128k -ar 44100 -f -vf scale=1280:720 flv rtmp://a.rtmp.youtube.com/live2/ggf0-p1a1-17h7-5taw-767b
+Loaded playlist with 2 videos
+FFmpeg stderr: ffmpeg version 6.1.2 Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Alpine 14.2.0)
+  configuration: --prefix=/usr --disable-librtmp --disable-lzma --disable-static --disable-stripping --enable-avfilter --enable-gpl --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libdav1d --enable-libdrm --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libmp3lame --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-libpulse --enable-librav1e --enable-librist --enable-libsoxr --enable-libsrt --enable-libssh --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-lto=auto --enable-lv2 --enable-openssl --enable-pic --enable-postproc --enable-pthreads --enable-shared --enable-vaapi --enable-vdpau --enable-version3 --enable-vulkan --optflags=-O3 --enable-libjxl --enable-libsvtav1 --enable-libvpl
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+
+RTMP stream stopped
+24x7 loop disabled
+POST /api/stream/stop 200 in 2ms :: {"id":1,"status":"offline","viewer_count":0…
+FFmpeg stderr: Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/app/uploads/1753007909370-H7QTV78IaTT_86vmhwzJD-2024-10-18 20-55-39.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf60.3.100
+  Duration: 00:11:05.47, start: 0.000000, bitrate: 2480 kb/s
+
+FFmpeg stderr:   Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2469 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+  Stream #0:1
+FFmpeg stderr: [0x2](und): Audio: aac (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 2 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+
+FFmpeg stderr: [AVFormatContext @ 0x7574e5137380] Requested output format '-vf' is not known.
+[out#0 @ 0x7574e5264680] Error initializing the muxer for scale=1280:720: Invalid argument
+Error opening output file scale=1280:720.
+Error opening output files: Invalid argument
+
+FFmpeg stderr: Exiting normally, received signal 15.
+
+FFmpeg process exited with code 234
+GET /api/stream-status 200 in 1ms :: {"id":1,"status":"offline","viewer_count":…
+GET /api/stream-config 304 in 2ms :: {"id":2,"platform":"youtube","streamKey":"…
+GET /api/system-config 304 in 1ms :: {"id":1,"rtmp_port":1935,"web_port":5000,"…
+GET /api/stream-status 304 in 1ms :: {"id":1,"status":"offline","viewer_count":…
+GET /api/system-config 304 in 2ms :: {"id":1,"rtmp_port":1935,"web_port":5000,"…
+GET /api/stream-status 304 in 1ms :: {"id":1,"status":"offline","viewer_count":…
+GET /api/stream-config 304 in 1ms :: {"id":2,"platform":"youtube","streamKey":"…
+GET /api/system-config 304 in 2ms :: {"id":1,"rtmp_port":1935,"web_port":5000,"…
+GET /api/stream-status 304 in 1ms :: {"id":1,"status":"offline","viewer_count":…
