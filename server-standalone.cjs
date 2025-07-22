@@ -42,7 +42,7 @@ const { Pool } = pg;
 
 const app = express();
 const server = createServer(app);
-const port = process.env.STANDALONE_PORT || process.env.PORT || 5001;
+const port = process.env.PORT || 5000;
 
 // Basic middleware
 app.use(express.json({ limit: '500mb' }));
@@ -171,7 +171,19 @@ app.get('/api/videos', async (req, res) => {
   try {
     if (!db) throw new Error('Database not available');
     const result = await db.query('SELECT * FROM videos ORDER BY playlist_order ASC');
-    res.json(result.rows);
+    
+    // Convert snake_case to camelCase for frontend compatibility
+    const videos = result.rows.map(video => ({
+      id: video.id,
+      title: video.title,
+      filename: video.filename,
+      fileSize: video.file_size,
+      duration: video.duration,
+      playlistOrder: video.playlist_order,
+      uploadedAt: video.uploaded_at
+    }));
+    
+    res.json(videos);
   } catch (error) {
     console.error('Error fetching videos:', error);
     res.status(500).json({ error: 'Failed to fetch videos' });
@@ -202,7 +214,17 @@ app.post('/api/videos', upload.single('video'), async (req, res) => {
       [title || 'Untitled Video', filename, fileSize, duration, playlistOrder]
     );
 
-    res.json(result.rows[0]);
+    // Convert snake_case to camelCase for frontend compatibility
+    const video = result.rows[0];
+    res.json({
+      id: video.id,
+      title: video.title,
+      filename: video.filename,
+      fileSize: video.file_size,
+      duration: video.duration,
+      playlistOrder: video.playlist_order,
+      uploadedAt: video.uploaded_at
+    });
   } catch (error) {
     console.error('Error uploading video:', error);
     res.status(500).json({ error: 'Failed to upload video' });
@@ -227,7 +249,17 @@ app.put('/api/videos/:id', async (req, res) => {
       return res.status(404).json({ error: 'Video not found' });
     }
 
-    res.json(result.rows[0]);
+    // Convert snake_case to camelCase for frontend compatibility
+    const video = result.rows[0];
+    res.json({
+      id: video.id,
+      title: video.title,
+      filename: video.filename,
+      fileSize: video.file_size,
+      duration: video.duration,
+      playlistOrder: video.playlist_order,
+      uploadedAt: video.uploaded_at
+    });
   } catch (error) {
     console.error('Error updating video:', error);
     res.status(500).json({ error: 'Failed to update video' });
